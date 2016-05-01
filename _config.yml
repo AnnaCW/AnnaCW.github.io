@@ -1,0 +1,21 @@
+timezone: America/Denver
+
+title: code_blog
+email: aweisbro@gmail.com
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "posts"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout : "default"
+
+
+    # The different types that are available to you are pages, posts, drafts or any collection in your site. While type is optional, you must specify a value for path when creating a scope/values pair.

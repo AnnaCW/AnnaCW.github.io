@@ -1,0 +1,29 @@
+body {
+  /*background-color: gray;*/
+  font-family: 'PT Sans', sans-serif;
+  padding: 20px;
+}
+
+.main {
+  width: auto;
+  height: 800px;
+  /*background-image: url("https://farm9.staticflickr.com/8567/16414338272_0e8c7fa4b4.jpg");
+  background-size: cover;*/
+}
+
+.post_listing {
+  padding: 5px;
+  /*border: 2px solid gray;*/
+}
+
+nav {
+  background: inherit;
+}
+
+/*a {
+  color: white;
+}*/
+
+#post_image {
+  height: 100px;
+}
