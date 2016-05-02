@@ -1,0 +1,14 @@
+---
+layout: default
+---
+
+<h2> Blog &#9997; </h2>
+
+
+{% for post in site.posts %}
+  <section class = "post_listing">
+  <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+  <h4>{{ post.date | date: "%m-%d-%Y" }}</h4>
+  <p>{{ post.content | strip_html | truncatewords:10}}</p>
+</section>
+{% endfor %}
