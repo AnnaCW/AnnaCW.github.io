@@ -1,7 +1,15 @@
 {% include header.html %}
 
+<div class = "pages">
+
+<section class = "blog_post">
+
 <h3>{{ page.title }}</h3>
 <p>{{ page.date | date: '%B %d, %Y' }}</p>
 {{ content }}
+
+</section>
+
+</div>
 
 {% include footer.html %}

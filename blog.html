@@ -2,8 +2,9 @@
 layout: default
 ---
 
-<h2> Blog &#9997; </h2>
+<div class = "pages">
 
+<h2> Blog &#9997; </h2>
 
 {% for post in site.posts %}
   <section class = "post_listing">
@@ -12,3 +13,6 @@ layout: default
   <p>{{ post.content | strip_html | truncatewords:10}}</p>
 </section>
 {% endfor %}
+
+
+</div>
