@@ -1,5 +1,4 @@
 
-
 body {
   font-family: 'PT Sans', sans-serif;
   padding: 20px;
@@ -22,7 +21,6 @@ a:hover {
   /*background-color: rgba(255, 255, 255, .3);*/
 }
 
-
 .main {
   width: auto;
   height: 800px;
@@ -32,7 +30,7 @@ a:hover {
 
 .pages {
   width: auto;
-  height: 800px;
+  height: 900px;
   background-color: rgba(235, 235, 245, .3);
   border: 1px solid silver;
   border-radius: 4px;
@@ -49,23 +47,30 @@ section.post_listing {
   border-radius: 3px;
 }
 
-.blog_post {
-  width: 250px;
-  margin: 10px;
-}
-
-
-
 nav {
   background: inherit;
-}
-
-
-.post_image {
-  height: 100px;
 }
 
 footer {
   color: gray;
   padding: 5px;
+}
+
+/******BLOG POSTS****/
+.screenshot {
+  height: 200px;
+}
+
+.blog_post {
+  width: auto;
+  margin: 10px;
+}
+
+li.last-line {
+  padding-bottom: 10px;
+}
+
+div.code-box td.code pre.code-body {
+  width: 350px;
+
 }
