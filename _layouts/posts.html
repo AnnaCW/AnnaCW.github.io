@@ -2,13 +2,13 @@
 
 <div class = "pages">
 
-<section class = "blog_post">
-
-<h3>{{ page.title }}</h3>
-<p>{{ page.date | date: '%B %d, %Y' }}</p>
-{{ content }}
-
-</section>
+  <section class = "blog_post">
+      <section class = "post_header">
+        <h3>{{ page.title }}</h3>
+        <h4>{{ page.date | date: '%B %d, %Y' }}</h4>
+    </section>
+    {{ content }}
+  </section>
 
 </div>
 
