@@ -29,7 +29,7 @@ footer {
 
 /****Home Page ****/
 
-.site_title {
+#site_title {
   margin: 20px;
   padding: 40px;
   width: inherit;
