@@ -1,6 +1,7 @@
 
 body {
   font-family: 'PT Sans', sans-serif;
+  font-size: 15px;
   padding: 20px;
 }
 
@@ -31,6 +32,7 @@ footer {
   color: rgba(255, 255, 255, .6);
   font-family: 'Lato', sans-serif;
   font-weight: 300;
+
 }
 
 h1 {
@@ -38,6 +40,11 @@ h1 {
   font-weight: 300;
   font-size: 40px;
   text-align: center;
+}
+
+#sub_title {
+  text-align: center;
+  font-size: 20px;
 }
 
 .main {
@@ -51,7 +58,7 @@ h1 {
 
 .pages {
   width: auto;
-  height: 900px;
+  height: auto;
   background-color: rgba(235, 235, 245, .3);
   border: 1px solid silver;
   border-radius: 4px;
@@ -70,6 +77,7 @@ section.post_listing {
 
 /******BLOG POSTS****/
 
+
 .large-image {
   height: 70%;
   width: 70%;
@@ -80,16 +88,18 @@ section.post_listing {
 }
 
 section.post_header {
-  width: 80%;
-  margin: 30px 20px;
+  width: 90%;
+  margin-bottom: 20px;
   border-bottom: 2px solid silver;
   border-radius: 3px;
 }
 
 
 .blog_post {
-  width: auto;
-  margin: 10px;
+  width: 80%;
+  height: auto;
+  margin: 30px;
+  align-content: center;
 }
 
 li.last-line {

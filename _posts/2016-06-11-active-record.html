@@ -1,0 +1,91 @@
+---
+title: Ruby => ActiveRecord
+layout: posts
+date: 2016-06-11
+---
+
+<section>
+
+<p> I started this post a few weeks ago when making the transition from Ruby to
+  Rails and ActiveRecord. The ActiveRecord documentation is excellent, but I found
+  it helpful at the beginning to run through a few ActiveRecord examples with
+  their Ruby equivalents. The examples below convert Ruby code I wrote in past
+  to ActiveRecord.
+</p>
+
+<p>
+</br>
+</p>
+
+<p><b>Ruby <code> select </code> can often be replaced by <code> where:</code></b></p>
+<p>Ruby:</br>
+  <code> Item.all.select do {|item| item.unit_price == price } </code></p>
+
+ActiveRecord:</br>
+
+  <code> Item.where(unit_price: price)</code>
+
+</p>
+
+<p>
+</br>
+</p>
+
+<p><b>Here ActiveRecord <code> order </code> replaces <code> sort_by: </code></b></p>
+
+<p>Ruby:</br>
+<code> Item.all.sort_by do { |item| item.unit_price } </code></p>
+
+<p>ActiveRecord:</br>
+<code> order(:unit_price)</code></p>
+-----
+<p>Ruby:</br>
+<code> Item.all.sort_by do {|item| item.unit_price}.reverse </code></p>
+
+<p>ActiveRecord:</br>
+<code> Item.order(unit_price: :desc) </code></p>
+----
+<p>Ruby:</br>
+<code>  Item.all.sort_by {|item| item.name} </code></p>
+
+<p>ActiveRecord:</br>
+<code>  Item.order(:name) </code>
+</p>
+
+<p>
+</br>
+</p>
+
+<p><b> ActiveRecord <code> pluck </code> returns an entire column, replacing <code> map </code> in this example:</br></b></p>
+  <p> <code> Item.all.map { |item| item.unit_price } </code></p>
+
+  <p>  <code>  Item.pluck(:unit_price) </code></p>
+
+<p>
+</br>
+</p>
+
+<p><b> Methods for returning an average become much more concise in ActiveRecord:</b></p>
+
+<p><code> (Item.all.map { |item| item.unit_price }).reduce(:+) / all_prices.count </code></p>
+
+<p><code> Item.average(:unit_price) </code></p>
+
+</p>
+
+<p>
+</br>
+</p>
+
+<p><b> "Grouping by" is also much easier in ActiveRecord.</b> Note, though, that
+  these methods don't return exactly the same thing.</p>
+
+<p><code> Invoice.all.group_by {|invoice| invoice.status}.map {|key, value| {key => value.length} } </br>
+ => [{"paid"=>2}, {"unpaid"=>2}, {"past due"=>1}] </code><p>
+
+<p><code> Item.group(:status).count </br>
+  => "paid"=>2, "unpaid"=>2, "past due"=>1 </code></p>
+<p>
+
+<p><b><a href="http://guides.rubyonrails.org/active_record_querying.html">Link to the docs</b></a>
+</section>
